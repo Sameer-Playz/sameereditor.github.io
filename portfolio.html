@@ -1,0 +1,662 @@
+<!doctype html>
+<html lang="en" class="h-full">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video Editing Services</title>
+  <script src="/_sdk/element_sdk.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+  <style>
+    body {
+      box-sizing: border-box;
+    }
+    * {
+      font-family: 'Space Grotesk', system-ui, -apple-system, sans-serif;
+    }
+    
+    #particles-canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      pointer-events: none;
+    }
+    
+    #app {
+      position: relative;
+      z-index: 1;
+    }
+  </style>
+  <style>@view-transition { navigation: auto; }</style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+ </head>
+ <body class="h-full">
+  <canvas id="particles-canvas"></canvas>
+  <div id="app" class="w-full h-full overflow-auto" style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);"><!-- Hero Section -->
+   <section id="hero" class="w-full min-h-screen flex items-center justify-center px-6 py-20" style="background-color: transparent;">
+    <div class="max-w-4xl mx-auto text-center">
+     <p class="mb-4 font-bold tracking-wider uppercase" style="color: #00d9ff; font-size: 32px;">Sameer</p>
+     <h1 id="hero-title" class="mb-6 font-bold leading-tight" style="color: #ffffff; font-size: 48px;">Professional Video Editing Services</h1>
+     <p id="hero-subtitle" class="mb-10 font-medium" style="color: #ffffff; font-size: 20px;">Transform your raw footage into stunning visual stories</p>
+     <div class="flex flex-wrap gap-4 justify-center"><button id="cta-button" class="px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:scale-105" style="background-color: #00d9ff; color: #1a1a2e;">Get Started</button> <button id="contact-jump-button" class="px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:scale-105 border-2" style="background-color: transparent; color: #ffffff; border-color: #00d9ff;">Get in Touch</button>
+     </div>
+    </div>
+   </section><!-- Services Section -->
+   <section id="services" class="w-full px-6 py-20" style="background-color: #16213e;">
+    <div class="max-w-6xl mx-auto">
+     <h2 id="services-title" class="text-center mb-16 font-bold" style="color: #ffffff; font-size: 40px;">Our Services</h2>
+     <div class="grid md:grid-cols-3 gap-8"><!-- Service 1 -->
+      <div class="service-card rounded-2xl p-8 transition-all duration-300 hover:scale-105" style="background-color: #1a1a2e; border: 2px solid #ff00ff;">
+       <div class="mb-6">
+        <svg class="w-16 h-16" viewbox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" style="color: #ff00ff;"><rect x="8" y="16" width="48" height="32" rx="4" stroke="currentColor" stroke-width="3" /> <path d="M26 28L38 34L26 40V28Z" fill="currentColor" />
+        </svg>
+       </div>
+       <h3 class="service-card-title mb-4 font-semibold" style="color: #ffffff; font-size: 24px;">Social Media Content</h3>
+       <p class="service-card-text" style="color: #ffffff; font-size: 16px;">Eye-catching videos optimized for Instagram, TikTok, YouTube, and more. Perfect for engagement and growth.</p>
+      </div><!-- Service 2 -->
+      <div class="service-card rounded-2xl p-8 transition-all duration-300 hover:scale-105" style="background-color: #1a1a2e; border: 2px solid #ff00ff;">
+       <div class="mb-6">
+        <svg class="w-16 h-16" viewbox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" style="color: #ff00ff;"><circle cx="32" cy="32" r="20" stroke="currentColor" stroke-width="3" /> <path d="M32 12V32L42 42" stroke="currentColor" stroke-width="3" stroke-linecap="round" />
+        </svg>
+       </div>
+       <h3 class="service-card-title mb-4 font-semibold" style="color: #ffffff; font-size: 24px;">Corporate Videos</h3>
+       <p class="service-card-text" style="color: #ffffff; font-size: 16px;">Professional presentations, training materials, and promotional content that elevate your brand.</p>
+      </div><!-- Service 3 -->
+      <div class="service-card rounded-2xl p-8 transition-all duration-300 hover:scale-105" style="background-color: #1a1a2e; border: 2px solid #ff00ff;">
+       <div class="mb-6">
+        <svg class="w-16 h-16" viewbox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" style="color: #ff00ff;"><path d="M16 48L32 16L48 48H16Z" stroke="currentColor" stroke-width="3" stroke-linejoin="round" /> <circle cx="32" cy="28" r="4" fill="currentColor" />
+        </svg>
+       </div>
+       <h3 class="service-card-title mb-4 font-semibold" style="color: #ffffff; font-size: 24px;">Event Highlights</h3>
+       <p class="service-card-text" style="color: #ffffff; font-size: 16px;">Capture the magic of weddings, conferences, and special moments with cinematic editing.</p>
+      </div>
+     </div>
+    </div>
+   </section><!-- Software Section -->
+   <section id="software" class="w-full px-6 py-20" style="background-color: transparent;">
+    <div class="max-w-6xl mx-auto">
+     <h2 id="software-title" class="text-center mb-6 font-bold" style="color: #ffffff; font-size: 40px;">Professional Tools We Use</h2>
+     <p id="software-subtitle" class="text-center mb-16 font-medium" style="color: #ffffff; font-size: 18px;">Industry-leading software for exceptional results</p>
+     <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8"><!-- Adobe Premiere Pro -->
+      <div class="software-card rounded-2xl p-8 transition-all duration-300 hover:scale-105" style="background-color: #1a1a2e; border: 2px solid #ff00ff;">
+       <div class="mb-6">
+        <svg class="w-20 h-20" viewbox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" style="color: #ff00ff;"><rect x="8" y="8" width="48" height="48" rx="8" fill="currentColor" opacity="0.2" /> <path d="M24 20h8c4 0 6 2 6 5s-2 5-6 5h-4v8h-4V20zm4 8h3c2 0 3-1 3-2.5s-1-2.5-3-2.5h-3v5z" fill="currentColor" /> <path d="M40 28h4v2c0.5-1 2-2.5 4-2.5v4c-3 0-4 1.5-4 4v2.5h-4V28z" fill="currentColor" />
+        </svg>
+       </div>
+       <h3 class="software-card-title mb-3 font-semibold" style="color: #ffffff; font-size: 24px;">Adobe Premiere Pro</h3>
+       <p class="software-card-text" style="color: #ffffff; font-size: 16px;">The industry standard for professional video editing with powerful features and seamless workflow.</p>
+      </div><!-- Filmora -->
+      <div class="software-card rounded-2xl p-8 transition-all duration-300 hover:scale-105" style="background-color: #1a1a2e; border: 2px solid #ff00ff;">
+       <div class="mb-6">
+        <svg class="w-20 h-20" viewbox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" style="color: #ff00ff;"><rect x="8" y="8" width="48" height="48" rx="8" fill="currentColor" opacity="0.2" /> <rect x="18" y="18" width="28" height="20" rx="2" stroke="currentColor" stroke-width="3" /> <path d="M26 26L36 32L26 38V26Z" fill="currentColor" /> <rect x="18" y="42" width="8" height="4" rx="1" fill="currentColor" /> <rect x="38" y="42" width="8" height="4" rx="1" fill="currentColor" />
+        </svg>
+       </div>
+       <h3 class="software-card-title mb-3 font-semibold" style="color: #ffffff; font-size: 24px;">Filmora</h3>
+       <p class="software-card-text" style="color: #ffffff; font-size: 16px;">User-friendly video editing software with powerful features perfect for creators of all levels.</p>
+      </div><!-- Canva -->
+      <div class="software-card rounded-2xl p-8 transition-all duration-300 hover:scale-105" style="background-color: #1a1a2e; border: 2px solid #ff00ff;">
+       <div class="mb-6">
+        <svg class="w-20 h-20" viewbox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" style="color: #ff00ff;"><rect x="8" y="8" width="48" height="48" rx="8" fill="currentColor" opacity="0.2" /> <circle cx="32" cy="24" r="6" stroke="currentColor" stroke-width="3" /> <path d="M20 40L26 32L32 38L38 30L44 40H20Z" fill="currentColor" /> <rect x="38" y="18" width="8" height="8" rx="2" fill="currentColor" />
+        </svg>
+       </div>
+       <h3 class="software-card-title mb-3 font-semibold" style="color: #ffffff; font-size: 24px;">Canva</h3>
+       <p class="software-card-text" style="color: #ffffff; font-size: 16px;">Design platform for creating stunning graphics, thumbnails, and visual content for your videos.</p>
+      </div><!-- VFX Minecraft -->
+      <div class="software-card rounded-2xl p-8 transition-all duration-300 hover:scale-105" style="background-color: #1a1a2e; border: 2px solid #ff00ff;">
+       <div class="mb-6">
+        <svg class="w-20 h-20" viewbox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" style="color: #ff00ff;"><rect x="8" y="8" width="48" height="48" rx="8" fill="currentColor" opacity="0.2" /> <rect x="16" y="20" width="12" height="12" stroke="currentColor" stroke-width="2" /> <rect x="36" y="20" width="12" height="12" stroke="currentColor" stroke-width="2" /> <rect x="16" y="36" width="12" height="12" stroke="currentColor" stroke-width="2" /> <rect x="36" y="36" width="12" height="12" stroke="currentColor" stroke-width="2" /> <path d="M28 26L36 30M28 42L36 38" stroke="currentColor" stroke-width="2" />
+        </svg>
+       </div>
+       <h3 class="software-card-title mb-3 font-semibold" style="color: #ffffff; font-size: 24px;">VFX Minecraft</h3>
+       <p class="software-card-text" style="color: #ffffff; font-size: 16px;">Specialized tools and effects for creating amazing Minecraft content with professional visual effects.</p>
+      </div>
+     </div>
+    </div>
+   </section><!-- Contact Section -->
+   <section id="contact" class="w-full px-6 py-20" style="background-color: transparent;">
+    <div class="max-w-2xl mx-auto">
+     <h2 id="contact-title" class="text-center mb-4 font-bold" style="color: #ffffff; font-size: 40px;">Let's Create Together</h2>
+     <p id="contact-subtitle" class="text-center mb-12" style="color: #ffffff; font-size: 18px;">Tell us about your project and we'll bring your vision to life</p>
+     <form id="contact-form" class="contact-form rounded-2xl p-8" style="background-color: #1a1a2e;">
+      <div class="mb-6"><label for="name" class="form-label block mb-2 font-medium" style="color: #ffffff; font-size: 16px;">Name</label> <input type="text" id="name" name="name" class="form-input w-full px-4 py-3 rounded-lg border-2 focus:outline-none focus:border-opacity-80 transition-colors" style="background-color: #16213e; color: #ffffff; border-color: #ff00ff;" required>
+      </div>
+      <div class="mb-6"><label for="email" class="form-label block mb-2 font-medium" style="color: #ffffff; font-size: 16px;">Email</label> <input type="email" id="email" name="email" class="form-input w-full px-4 py-3 rounded-lg border-2 focus:outline-none focus:border-opacity-80 transition-colors" style="background-color: #16213e; color: #ffffff; border-color: #ff00ff;" required>
+      </div>
+      <div class="mb-6"><label for="project" class="form-label block mb-2 font-medium" style="color: #ffffff; font-size: 16px;">Project Details</label> <textarea id="project" name="project" rows="5" class="form-input w-full px-4 py-3 rounded-lg border-2 focus:outline-none focus:border-opacity-80 transition-colors resize-none" style="background-color: #16213e; color: #ffffff; border-color: #ff00ff;" required></textarea>
+      </div><button type="submit" id="submit-button" class="w-full py-4 rounded-lg font-semibold transition-all duration-300 hover:scale-105" style="background-color: #00d9ff; color: #1a1a2e;">Send Message</button>
+      <div id="form-message" class="mt-4 p-4 rounded-lg hidden"></div>
+     </form>
+    </div>
+   </section><!-- Feedback Section -->
+   <section id="feedback" class="w-full px-6 py-20" style="background-color: #16213e;">
+    <div class="max-w-2xl mx-auto">
+     <h2 id="feedback-title" class="text-center mb-4 font-bold" style="color: #ffffff; font-size: 40px;">Share Your Feedback</h2>
+     <p id="feedback-subtitle" class="text-center mb-12" style="color: #ffffff; font-size: 18px;">We'd love to hear your thoughts and suggestions</p>
+     <form id="feedback-form" class="feedback-form rounded-2xl p-8" style="background-color: #1a1a2e;">
+      <div class="mb-6"><label for="feedback-name" class="feedback-label block mb-2 font-medium" style="color: #ffffff; font-size: 16px;">Name</label> <input type="text" id="feedback-name" name="feedback-name" class="feedback-input w-full px-4 py-3 rounded-lg border-2 focus:outline-none focus:border-opacity-80 transition-colors" style="background-color: #16213e; color: #ffffff; border-color: #ff00ff;" required>
+      </div>
+      <div class="mb-6"><label for="feedback-email" class="feedback-label block mb-2 font-medium" style="color: #ffffff; font-size: 16px;">Email</label> <input type="email" id="feedback-email" name="feedback-email" class="feedback-input w-full px-4 py-3 rounded-lg border-2 focus:outline-none focus:border-opacity-80 transition-colors" style="background-color: #16213e; color: #ffffff; border-color: #ff00ff;" required>
+      </div>
+      <div class="mb-6"><label for="rating" class="feedback-label block mb-2 font-medium" style="color: #ffffff; font-size: 16px;">Rating</label>
+       <div class="flex gap-3 justify-center mb-4"><button type="button" class="rating-btn w-12 h-12 rounded-lg font-bold transition-all duration-300 hover:scale-110" data-rating="1" style="background-color: #16213e; color: #ffffff; border: 2px solid #ff00ff;">1</button> <button type="button" class="rating-btn w-12 h-12 rounded-lg font-bold transition-all duration-300 hover:scale-110" data-rating="2" style="background-color: #16213e; color: #ffffff; border: 2px solid #ff00ff;">2</button> <button type="button" class="rating-btn w-12 h-12 rounded-lg font-bold transition-all duration-300 hover:scale-110" data-rating="3" style="background-color: #16213e; color: #ffffff; border: 2px solid #ff00ff;">3</button> <button type="button" class="rating-btn w-12 h-12 rounded-lg font-bold transition-all duration-300 hover:scale-110" data-rating="4" style="background-color: #16213e; color: #ffffff; border: 2px solid #ff00ff;">4</button> <button type="button" class="rating-btn w-12 h-12 rounded-lg font-bold transition-all duration-300 hover:scale-110" data-rating="5" style="background-color: #16213e; color: #ffffff; border: 2px solid #ff00ff;">5</button>
+       </div><input type="hidden" id="rating-value" name="rating" required>
+      </div>
+      <div class="mb-6"><label for="feedback-message" class="feedback-label block mb-2 font-medium" style="color: #ffffff; font-size: 16px;">Your Feedback</label> <textarea id="feedback-message" name="feedback-message" rows="5" class="feedback-input w-full px-4 py-3 rounded-lg border-2 focus:outline-none focus:border-opacity-80 transition-colors resize-none" style="background-color: #16213e; color: #ffffff; border-color: #ff00ff;" required></textarea>
+      </div><button type="submit" id="feedback-submit-button" class="w-full py-4 rounded-lg font-semibold transition-all duration-300 hover:scale-105" style="background-color: #00d9ff; color: #1a1a2e;">Submit Feedback</button>
+      <div id="feedback-message-display" class="mt-4 p-4 rounded-lg hidden"></div>
+     </form>
+    </div>
+   </section><!-- Footer -->
+   <footer id="footer" class="w-full px-6 py-12 text-center" style="background-color: #16213e;">
+    <p class="footer-text" style="color: #ffffff;">© 2024 Video Editing Services. All rights reserved.</p>
+   </footer>
+  </div>
+  <script>
+    // Particle Animation System - Initialize immediately
+    const canvas = document.getElementById('particles-canvas');
+    const ctx = canvas.getContext('2d');
+    
+    let particles = [];
+    const particleCount = 100;
+    
+    function resizeCanvas() {
+      canvas.width = window.innerWidth;
+      canvas.height = document.body.scrollHeight;
+    }
+    
+    resizeCanvas();
+    window.addEventListener('resize', resizeCanvas);
+    
+    class Particle {
+      constructor() {
+        this.reset();
+        this.y = Math.random() * canvas.height;
+        this.opacity = Math.random() * 0.8 + 0.2;
+      }
+      
+      reset() {
+        this.x = Math.random() * canvas.width;
+        this.y = -10;
+        this.size = Math.random() * 4 + 2;
+        this.speedY = Math.random() * 1 + 0.5;
+        this.speedX = (Math.random() - 0.5) * 0.5;
+        this.opacity = Math.random() * 0.8 + 0.2;
+        
+        // Bright neon colors
+        const colors = [
+          '0, 255, 255',      // cyan
+          '255, 0, 255',      // magenta
+          '139, 92, 246',     // purple
+          '99, 102, 241',     // blue
+          '236, 72, 153'      // pink
+        ];
+        this.color = colors[Math.floor(Math.random() * colors.length)];
+      }
+      
+      update() {
+        this.y += this.speedY;
+        this.x += this.speedX;
+        
+        // Pulsing opacity
+        this.opacity += Math.sin(Date.now() * 0.001 + this.x) * 0.01;
+        this.opacity = Math.max(0.2, Math.min(1, this.opacity));
+        
+        if (this.y > canvas.height + 20 || this.x < -20 || this.x > canvas.width + 20) {
+          this.reset();
+        }
+      }
+      
+      draw() {
+        // Outer glow
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.size * 3, 0, Math.PI * 2);
+        const gradient = ctx.createRadialGradient(this.x, this.y, 0, this.x, this.y, this.size * 3);
+        gradient.addColorStop(0, `rgba(${this.color}, ${this.opacity * 0.8})`);
+        gradient.addColorStop(0.5, `rgba(${this.color}, ${this.opacity * 0.3})`);
+        gradient.addColorStop(1, `rgba(${this.color}, 0)`);
+        ctx.fillStyle = gradient;
+        ctx.fill();
+        
+        // Core particle
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(${this.color}, ${this.opacity})`;
+        ctx.shadowBlur = 20;
+        ctx.shadowColor = `rgba(${this.color}, 1)`;
+        ctx.fill();
+        ctx.shadowBlur = 0;
+      }
+    }
+    
+    // Create particles
+    for (let i = 0; i < particleCount; i++) {
+      particles.push(new Particle());
+    }
+    
+    function animateParticles() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      
+      particles.forEach(particle => {
+        particle.update();
+        particle.draw();
+      });
+      
+      requestAnimationFrame(animateParticles);
+    }
+    
+    animateParticles();
+
+    const defaultConfig = {
+      background_color: "#1a1a2e",
+      surface_color: "#16213e",
+      text_color: "#ffffff",
+      primary_action_color: "#00d9ff",
+      secondary_action_color: "#ff00ff",
+      font_family: "Space Grotesk",
+      font_size: 16,
+      hero_title: "Professional Video Editing Services",
+      hero_subtitle: "Transform your raw footage into stunning visual stories",
+      cta_button: "Get Started",
+      services_title: "Our Services",
+      contact_title: "Let's Create Together",
+      contact_subtitle: "Tell us about your project and we'll bring your vision to life",
+      submit_button: "Send Message"
+    };
+
+    async function onConfigChange(config) {
+      const customFont = config.font_family || defaultConfig.font_family;
+      const baseFontStack = 'system-ui, -apple-system, sans-serif';
+      const baseSize = config.font_size || defaultConfig.font_size;
+      
+      const backgroundColor = config.background_color || defaultConfig.background_color;
+      const surfaceColor = config.surface_color || defaultConfig.surface_color;
+      const textColor = config.text_color || defaultConfig.text_color;
+      const primaryColor = config.primary_action_color || defaultConfig.primary_action_color;
+      const secondaryColor = config.secondary_action_color || defaultConfig.secondary_action_color;
+
+      // Apply background colors
+      document.getElementById('app').style.background = `linear-gradient(135deg, ${backgroundColor} 0%, ${surfaceColor} 100%)`;
+      document.getElementById('hero').style.backgroundColor = 'transparent';
+      document.getElementById('services').style.backgroundColor = surfaceColor;
+      document.getElementById('software').style.backgroundColor = 'transparent';
+      document.getElementById('contact').style.backgroundColor = 'transparent';
+      document.getElementById('footer').style.backgroundColor = surfaceColor;
+
+      // Apply text colors
+      document.getElementById('hero-title').style.color = textColor;
+      document.getElementById('hero-subtitle').style.color = textColor;
+      document.getElementById('services-title').style.color = textColor;
+      document.getElementById('software-title').style.color = textColor;
+      document.getElementById('software-subtitle').style.color = textColor;
+      document.getElementById('contact-title').style.color = textColor;
+      document.getElementById('contact-subtitle').style.color = textColor;
+      document.querySelector('.footer-text').style.color = textColor;
+
+      // Apply fonts and sizes
+      document.getElementById('hero-title').style.fontFamily = `${customFont}, ${baseFontStack}`;
+      document.getElementById('hero-title').style.fontSize = `${baseSize * 3}px`;
+      
+      document.getElementById('hero-subtitle').style.fontFamily = `${customFont}, ${baseFontStack}`;
+      document.getElementById('hero-subtitle').style.fontSize = `${baseSize * 1.25}px`;
+      
+      document.getElementById('services-title').style.fontFamily = `${customFont}, ${baseFontStack}`;
+      document.getElementById('services-title').style.fontSize = `${baseSize * 2.5}px`;
+      
+      document.getElementById('software-title').style.fontFamily = `${customFont}, ${baseFontStack}`;
+      document.getElementById('software-title').style.fontSize = `${baseSize * 2.5}px`;
+      
+      document.getElementById('software-subtitle').style.fontFamily = `${customFont}, ${baseFontStack}`;
+      document.getElementById('software-subtitle').style.fontSize = `${baseSize * 1.125}px`;
+      
+      document.getElementById('contact-title').style.fontFamily = `${customFont}, ${baseFontStack}`;
+      document.getElementById('contact-title').style.fontSize = `${baseSize * 2.5}px`;
+      
+      document.getElementById('contact-subtitle').style.fontFamily = `${customFont}, ${baseFontStack}`;
+      document.getElementById('contact-subtitle').style.fontSize = `${baseSize * 1.125}px`;
+
+      // Apply button colors and text
+      const ctaButton = document.getElementById('cta-button');
+      ctaButton.style.backgroundColor = primaryColor;
+      ctaButton.style.color = backgroundColor;
+      ctaButton.textContent = config.cta_button || defaultConfig.cta_button;
+      
+      const contactJumpButton = document.getElementById('contact-jump-button');
+      contactJumpButton.style.backgroundColor = 'transparent';
+      contactJumpButton.style.color = textColor;
+      contactJumpButton.style.borderColor = primaryColor;
+      
+      const submitButton = document.getElementById('submit-button');
+      submitButton.style.backgroundColor = primaryColor;
+      submitButton.style.color = backgroundColor;
+      submitButton.textContent = config.submit_button || defaultConfig.submit_button;
+
+      // Apply service card styles
+      const serviceCards = document.querySelectorAll('.service-card');
+      serviceCards.forEach(card => {
+        card.style.backgroundColor = backgroundColor;
+        card.style.border = `2px solid ${secondaryColor}`;
+      });
+
+      const serviceTitles = document.querySelectorAll('.service-card-title');
+      serviceTitles.forEach(title => {
+        title.style.color = textColor;
+        title.style.fontFamily = `${customFont}, ${baseFontStack}`;
+        title.style.fontSize = `${baseSize * 1.5}px`;
+      });
+
+      const serviceTexts = document.querySelectorAll('.service-card-text');
+      serviceTexts.forEach(text => {
+        text.style.color = textColor;
+        text.style.fontFamily = `${customFont}, ${baseFontStack}`;
+        text.style.fontSize = `${baseSize}px`;
+      });
+
+      const svgs = document.querySelectorAll('.service-card svg');
+      svgs.forEach(svg => {
+        svg.style.color = secondaryColor;
+      });
+
+      // Apply software card styles
+      const softwareCards = document.querySelectorAll('.software-card');
+      softwareCards.forEach(card => {
+        card.style.backgroundColor = backgroundColor;
+        card.style.border = `2px solid ${secondaryColor}`;
+      });
+
+      const softwareTitles = document.querySelectorAll('.software-card-title');
+      softwareTitles.forEach(title => {
+        title.style.color = textColor;
+        title.style.fontFamily = `${customFont}, ${baseFontStack}`;
+        title.style.fontSize = `${baseSize * 1.5}px`;
+      });
+
+      const softwareTexts = document.querySelectorAll('.software-card-text');
+      softwareTexts.forEach(text => {
+        text.style.color = textColor;
+        text.style.fontFamily = `${customFont}, ${baseFontStack}`;
+        text.style.fontSize = `${baseSize}px`;
+      });
+
+      const softwareSvgs = document.querySelectorAll('.software-card svg');
+      softwareSvgs.forEach(svg => {
+        svg.style.color = secondaryColor;
+      });
+
+      // Apply contact form styles
+      document.querySelector('.contact-form').style.backgroundColor = backgroundColor;
+      
+      const formLabels = document.querySelectorAll('.form-label');
+      formLabels.forEach(label => {
+        label.style.color = textColor;
+        label.style.fontFamily = `${customFont}, ${baseFontStack}`;
+        label.style.fontSize = `${baseSize}px`;
+      });
+
+      const formInputs = document.querySelectorAll('.form-input');
+      formInputs.forEach(input => {
+        input.style.backgroundColor = surfaceColor;
+        input.style.color = textColor;
+        input.style.borderColor = secondaryColor;
+        input.style.fontFamily = `${customFont}, ${baseFontStack}`;
+        input.style.fontSize = `${baseSize}px`;
+      });
+
+      // Apply feedback form styles
+      document.querySelector('.feedback-form').style.backgroundColor = backgroundColor;
+      document.getElementById('feedback-title').style.color = textColor;
+      document.getElementById('feedback-title').style.fontFamily = `${customFont}, ${baseFontStack}`;
+      document.getElementById('feedback-title').style.fontSize = `${baseSize * 2.5}px`;
+      
+      document.getElementById('feedback-subtitle').style.color = textColor;
+      document.getElementById('feedback-subtitle').style.fontFamily = `${customFont}, ${baseFontStack}`;
+      document.getElementById('feedback-subtitle').style.fontSize = `${baseSize * 1.125}px`;
+      
+      const feedbackLabels = document.querySelectorAll('.feedback-label');
+      feedbackLabels.forEach(label => {
+        label.style.color = textColor;
+        label.style.fontFamily = `${customFont}, ${baseFontStack}`;
+        label.style.fontSize = `${baseSize}px`;
+      });
+
+      const feedbackInputs = document.querySelectorAll('.feedback-input');
+      feedbackInputs.forEach(input => {
+        input.style.backgroundColor = surfaceColor;
+        input.style.color = textColor;
+        input.style.borderColor = secondaryColor;
+        input.style.fontFamily = `${customFont}, ${baseFontStack}`;
+        input.style.fontSize = `${baseSize}px`;
+      });
+
+      const ratingButtons = document.querySelectorAll('.rating-btn');
+      ratingButtons.forEach(btn => {
+        if (!btn.style.backgroundColor || btn.style.backgroundColor === surfaceColor) {
+          btn.style.backgroundColor = surfaceColor;
+          btn.style.color = textColor;
+          btn.style.borderColor = secondaryColor;
+        }
+      });
+
+      const feedbackSubmitButton = document.getElementById('feedback-submit-button');
+      feedbackSubmitButton.style.backgroundColor = primaryColor;
+      feedbackSubmitButton.style.color = backgroundColor;
+
+      // Apply editable text content
+      document.getElementById('hero-title').textContent = config.hero_title || defaultConfig.hero_title;
+      document.getElementById('hero-subtitle').textContent = config.hero_subtitle || defaultConfig.hero_subtitle;
+      document.getElementById('services-title').textContent = config.services_title || defaultConfig.services_title;
+      document.getElementById('contact-title').textContent = config.contact_title || defaultConfig.contact_title;
+      document.getElementById('contact-subtitle').textContent = config.contact_subtitle || defaultConfig.contact_subtitle;
+    }
+
+    function mapToCapabilities(config) {
+      return {
+        recolorables: [
+          {
+            get: () => config.background_color || defaultConfig.background_color,
+            set: (value) => {
+              config.background_color = value;
+              window.elementSdk.setConfig({ background_color: value });
+            }
+          },
+          {
+            get: () => config.surface_color || defaultConfig.surface_color,
+            set: (value) => {
+              config.surface_color = value;
+              window.elementSdk.setConfig({ surface_color: value });
+            }
+          },
+          {
+            get: () => config.text_color || defaultConfig.text_color,
+            set: (value) => {
+              config.text_color = value;
+              window.elementSdk.setConfig({ text_color: value });
+            }
+          },
+          {
+            get: () => config.primary_action_color || defaultConfig.primary_action_color,
+            set: (value) => {
+              config.primary_action_color = value;
+              window.elementSdk.setConfig({ primary_action_color: value });
+            }
+          },
+          {
+            get: () => config.secondary_action_color || defaultConfig.secondary_action_color,
+            set: (value) => {
+              config.secondary_action_color = value;
+              window.elementSdk.setConfig({ secondary_action_color: value });
+            }
+          }
+        ],
+        borderables: [],
+        fontEditable: {
+          get: () => config.font_family || defaultConfig.font_family,
+          set: (value) => {
+            config.font_family = value;
+            window.elementSdk.setConfig({ font_family: value });
+          }
+        },
+        fontSizeable: {
+          get: () => config.font_size || defaultConfig.font_size,
+          set: (value) => {
+            config.font_size = value;
+            window.elementSdk.setConfig({ font_size: value });
+          }
+        }
+      };
+    }
+
+    function mapToEditPanelValues(config) {
+      return new Map([
+        ["hero_title", config.hero_title || defaultConfig.hero_title],
+        ["hero_subtitle", config.hero_subtitle || defaultConfig.hero_subtitle],
+        ["cta_button", config.cta_button || defaultConfig.cta_button],
+        ["services_title", config.services_title || defaultConfig.services_title],
+        ["contact_title", config.contact_title || defaultConfig.contact_title],
+        ["contact_subtitle", config.contact_subtitle || defaultConfig.contact_subtitle],
+        ["submit_button", config.submit_button || defaultConfig.submit_button]
+      ]);
+    }
+
+    // Contact Form handling
+    document.getElementById('contact-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const formMessage = document.getElementById('form-message');
+      const config = window.elementSdk ? window.elementSdk.config : defaultConfig;
+      const textColor = config.text_color || defaultConfig.text_color;
+      const primaryColor = config.primary_action_color || defaultConfig.primary_action_color;
+      
+      formMessage.textContent = '✨ Thank you! Your message has been sent successfully.';
+      formMessage.style.backgroundColor = primaryColor;
+      formMessage.style.color = textColor;
+      formMessage.classList.remove('hidden');
+      
+      this.reset();
+      
+      setTimeout(() => {
+        formMessage.classList.add('hidden');
+      }, 5000);
+    });
+
+    // Rating button handling
+    let selectedRating = null;
+    const ratingButtons = document.querySelectorAll('.rating-btn');
+    
+    ratingButtons.forEach(btn => {
+      btn.addEventListener('click', function() {
+        selectedRating = this.getAttribute('data-rating');
+        document.getElementById('rating-value').value = selectedRating;
+        
+        const config = window.elementSdk ? window.elementSdk.config : defaultConfig;
+        const primaryColor = config.primary_action_color || defaultConfig.primary_action_color;
+        const surfaceColor = config.surface_color || defaultConfig.surface_color;
+        const secondaryColor = config.secondary_action_color || defaultConfig.secondary_action_color;
+        
+        // Reset all buttons
+        ratingButtons.forEach(b => {
+          b.style.backgroundColor = surfaceColor;
+          b.style.borderColor = secondaryColor;
+        });
+        
+        // Highlight selected button
+        this.style.backgroundColor = primaryColor;
+        this.style.borderColor = primaryColor;
+      });
+    });
+
+    // Feedback Form handling
+    document.getElementById('feedback-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      if (!selectedRating) {
+        const feedbackMessageDisplay = document.getElementById('feedback-message-display');
+        const config = window.elementSdk ? window.elementSdk.config : defaultConfig;
+        const textColor = config.text_color || defaultConfig.text_color;
+        const secondaryColor = config.secondary_action_color || defaultConfig.secondary_action_color;
+        
+        feedbackMessageDisplay.textContent = '⚠️ Please select a rating before submitting.';
+        feedbackMessageDisplay.style.backgroundColor = secondaryColor;
+        feedbackMessageDisplay.style.color = textColor;
+        feedbackMessageDisplay.classList.remove('hidden');
+        
+        setTimeout(() => {
+          feedbackMessageDisplay.classList.add('hidden');
+        }, 3000);
+        return;
+      }
+      
+      const feedbackMessageDisplay = document.getElementById('feedback-message-display');
+      const config = window.elementSdk ? window.elementSdk.config : defaultConfig;
+      const textColor = config.text_color || defaultConfig.text_color;
+      const primaryColor = config.primary_action_color || defaultConfig.primary_action_color;
+      
+      feedbackMessageDisplay.textContent = '🌟 Thank you for your feedback! We appreciate your input.';
+      feedbackMessageDisplay.style.backgroundColor = primaryColor;
+      feedbackMessageDisplay.style.color = textColor;
+      feedbackMessageDisplay.classList.remove('hidden');
+      
+      this.reset();
+      selectedRating = null;
+      
+      // Reset rating buttons
+      const surfaceColor = config.surface_color || defaultConfig.surface_color;
+      const secondaryColor = config.secondary_action_color || defaultConfig.secondary_action_color;
+      ratingButtons.forEach(b => {
+        b.style.backgroundColor = surfaceColor;
+        b.style.borderColor = secondaryColor;
+      });
+      
+      setTimeout(() => {
+        feedbackMessageDisplay.classList.add('hidden');
+      }, 5000);
+    });
+      e.preventDefault();
+      
+      const formMessage = document.getElementById('form-message');
+      const config = window.elementSdk ? window.elementSdk.config : defaultConfig;
+      const textColor = config.text_color || defaultConfig.text_color;
+      const primaryColor = config.primary_action_color || defaultConfig.primary_action_color;
+      
+      formMessage.textContent = '�� Thank you! Your message has been sent successfully.';
+      formMessage.style.backgroundColor = primaryColor;
+      formMessage.style.color = textColor;
+      formMessage.classList.remove('hidden');
+      
+      this.reset();
+      
+      setTimeout(() => {
+        formMessage.classList.add('hidden');
+      }, 5000);
+    ;
+
+    // Smooth scroll for CTA button
+    document.getElementById('cta-button').addEventListener('click', function(e) {
+      e.preventDefault();
+      document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+    });
+
+    // Smooth scroll for contact jump button
+    document.getElementById('contact-jump-button').addEventListener('click', function(e) {
+      e.preventDefault();
+      document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+    });
+
+    // Initialize SDK
+    if (window.elementSdk) {
+      window.elementSdk.init({
+        defaultConfig,
+        onConfigChange,
+        mapToCapabilities,
+        mapToEditPanelValues
+      });
+    }
+  </script> 
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9c896da6c14e180c',t:'MTc3MDIwMDM1Mi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
+
+
